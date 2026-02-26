@@ -1,0 +1,227 @@
+/* Sidebar - Design Harmonioso */
+.sideBar {
+  background: linear-gradient(180deg, #EA1D2C 0%, #B71C1C 100%);
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+/* Modo claro - sidebar vermelha */
+.sideBar.light {
+  background: linear-gradient(180deg, #EA1D2C 0%, #B71C1C 100%);
+}
+
+/* Modo escuro - sidebar escura */
+.sideBar.dark {
+  background: linear-gradient(180deg, #1E1E1E 0%, #121212 100%);
+  border-right: 1px solid #2D2D2D;
+}
+
+/* Logo */
+.logoDiv {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--radius);
+}
+
+.logoDiv:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .logoDiv:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.logoDiv img {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  background: white;
+  padding: 6px;
+}
+
+.logoDiv h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* Menu Section */
+.menuDiv {
+  flex: 1;
+}
+
+.divTitle {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.dark .divTitle {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.menuLists {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  width: 100%;
+  list-style: none;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  text-decoration: none;
+}
+
+.menuLink:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.dark .menuLink:hover {
+  background: rgba(234, 29, 44, 0.15);
+}
+
+.menuLink.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dark .menuLink.active {
+  background: rgba(234, 29, 44, 0.2);
+  color: #EA1D2C;
+}
+
+.menuLink.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 0 4px 4px 0;
+}
+
+.dark .menuLink.active::before {
+  background: #EA1D2C;
+}
+
+.menuLink .icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.menuLink:hover .icon {
+  transform: scale(1.1);
+}
+
+.smallText {
+  white-space: nowrap;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  .sideBar {
+    width: 220px;
+    min-width: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sideBar {
+    width: 72px;
+    min-width: 72px;
+    padding: 1rem 0.5rem;
+    align-items: center;
+  }
+
+  .logoDiv {
+    justify-content: center;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .logoDiv h2,
+  .divTitle,
+  .smallText {
+    display: none;
+  }
+
+  .logoDiv img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menuDiv {
+    width: 100%;
+  }
+
+  .menuLists {
+    align-items: center;
+  }
+
+  .menuLink {
+    justify-content: center;
+    padding: 0.875rem;
+    width: 52px;
+    height: 52px;
+  }
+
+  .menuLink .icon {
+    font-size: 1.4rem;
+  }
+
+  .menuLink.active::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sideBar {
+    width: 60px;
+    min-width: 60px;
+  }
+
+  .menuLink {
+    width: 44px;
+    height: 44px;
+  }
+}

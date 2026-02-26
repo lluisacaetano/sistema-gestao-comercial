@@ -1,0 +1,475 @@
+/* Cadastrar Produto - Design Harmonioso */
+
+/* Container principal */
+.cadastrarProdutoContainer {
+  padding: 0;
+  min-height: auto;
+  transition: var(--transition);
+}
+
+.cadastrarProdutoContainer.light {
+  color: var(--gray-800);
+}
+
+.cadastrarProdutoContainer.dark {
+  color: var(--gray-100);
+}
+
+/* Card do formulário */
+.formCard {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid var(--gray-100);
+}
+
+.dark .formCard {
+  background: var(--bg-dark-secondary);
+  border-color: #2D2D2D;
+  box-shadow: none;
+}
+
+/* Header do conteúdo */
+.contentHeader {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.dark .contentHeader {
+  border-color: #2D2D2D;
+}
+
+.contentHeader h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.dark .contentHeader h2 {
+  color: #ffffff;
+}
+
+.contentHeader p {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+.dark .contentHeader p {
+  color: var(--gray-400);
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Grupos do formulário */
+.formGroup {
+  margin-bottom: 0;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+
+.dark .formGroup label {
+  color: var(--gray-300);
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: var(--bg-secondary);
+  color: var(--gray-800);
+  transition: var(--transition);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(234, 29, 44, 0.1);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: var(--gray-400);
+}
+
+.dark .formGroup input,
+.dark .formGroup textarea,
+.dark .formGroup select {
+  background: var(--bg-dark-tertiary);
+  color: var(--gray-100);
+  border-color: #3D3D3D;
+}
+
+.dark .formGroup input::placeholder,
+.dark .formGroup textarea::placeholder {
+  color: var(--gray-500);
+}
+
+.dark .formGroup input:focus,
+.dark .formGroup textarea:focus,
+.dark .formGroup select:focus {
+  box-shadow: 0 0 0 3px rgba(234, 29, 44, 0.2);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Grid de campos (2 colunas) */
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Ações do formulário */
+.formActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-100);
+}
+
+.dark .formActions {
+  border-color: #2D2D2D;
+}
+
+/* Botão primário */
+.btnPrimary {
+  background: var(--primary);
+  color: white;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btnPrimary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btnPrimary:active {
+  transform: translateY(0);
+}
+
+/* Botão secundário */
+.btnSecondary {
+  background: var(--gray-200);
+  color: var(--gray-700);
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btnSecondary:hover {
+  background: var(--gray-300);
+}
+
+.dark .btnSecondary {
+  background: #3D3D3D;
+  color: var(--gray-300);
+}
+
+.dark .btnSecondary:hover {
+  background: #4D4D4D;
+}
+
+/* Card da tabela */
+.tabelaCard {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+}
+
+.dark .tabelaCard {
+  background: var(--bg-dark-secondary);
+  border-color: #2D2D2D;
+  box-shadow: none;
+}
+
+.tabelaCard h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.dark .tabelaCard h3 {
+  color: #ffffff;
+}
+
+/* Tabela de produtos */
+.produtosTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.produtosTable thead tr {
+  background: var(--gray-50);
+}
+
+.dark .produtosTable thead tr {
+  background: var(--bg-dark-tertiary);
+}
+
+.produtosTable th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-500);
+}
+
+.produtosTable th:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.produtosTable th:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.dark .produtosTable th {
+  color: var(--gray-400);
+}
+
+.produtosTable td {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
+  vertical-align: middle;
+}
+
+.dark .produtosTable td {
+  color: var(--gray-300);
+  border-color: #2D2D2D;
+}
+
+.produtosTable tbody tr {
+  transition: var(--transition);
+}
+
+.produtosTable tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.dark .produtosTable tbody tr:hover {
+  background: var(--bg-dark-tertiary);
+}
+
+.produtosTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Imagem na tabela */
+.produtosTable img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.dark .produtosTable img {
+  border-color: #3D3D3D;
+}
+
+/* Inputs de edição inline */
+.produtosTable input {
+  padding: 0.5rem;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  background: var(--bg-secondary);
+  color: var(--gray-800);
+}
+
+.produtosTable input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.dark .produtosTable input {
+  background: var(--bg-dark-tertiary);
+  color: var(--gray-100);
+  border-color: #3D3D3D;
+}
+
+/* Botões de ação na tabela */
+.btnEdit,
+.btnDelete,
+.btnSave,
+.btnCancel {
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-right: 0.5rem;
+}
+
+.btnEdit {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+.btnEdit:hover {
+  background: #BBDEFB;
+}
+
+.btnDelete {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.btnDelete:hover {
+  background: #FFCDD2;
+}
+
+.btnSave {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.btnSave:hover {
+  background: #C8E6C9;
+}
+
+.btnCancel {
+  background: var(--gray-200);
+  color: var(--gray-600);
+}
+
+.btnCancel:hover {
+  background: var(--gray-300);
+}
+
+.dark .btnEdit {
+  background: rgba(2, 136, 209, 0.2);
+  color: #64B5F6;
+}
+
+.dark .btnDelete {
+  background: rgba(211, 47, 47, 0.2);
+  color: #EF9A9A;
+}
+
+.dark .btnSave {
+  background: rgba(46, 125, 50, 0.2);
+  color: #81C784;
+}
+
+.dark .btnCancel {
+  background: #3D3D3D;
+  color: var(--gray-400);
+}
+
+/* Imagem na tabela */
+.produtoImgTabela {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+}
+
+.dark .produtoImgTabela {
+  border-color: #3D3D3D;
+}
+
+/* Input de edição inline */
+.inputEdit {
+  width: 80px !important;
+  padding: 0.5rem !important;
+}
+
+/* Célula de descrição */
+.descricaoCell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Nome do produto na tabela */
+.produtosTable td strong {
+  color: var(--gray-900);
+}
+
+.dark .produtosTable td strong {
+  color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .formCard {
+    padding: 1.5rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+  }
+
+  .tabelaCard {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .produtosTable {
+    min-width: 600px;
+  }
+}

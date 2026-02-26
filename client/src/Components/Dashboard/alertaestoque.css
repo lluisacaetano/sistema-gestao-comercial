@@ -1,0 +1,207 @@
+/* Alerta de Estoque - Design Harmonioso */
+
+.alertaEstoqueContainer {
+  padding: 0;
+  transition: var(--transition);
+}
+
+.alertaEstoqueContainer.light {
+  color: var(--gray-800);
+}
+
+.alertaEstoqueContainer.dark {
+  color: var(--gray-100);
+}
+
+/* Card principal */
+.alertaCard {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+}
+
+.dark .alertaCard {
+  background: var(--bg-dark-secondary);
+  border-color: #2D2D2D;
+  box-shadow: none;
+}
+
+/* Header */
+.alertaHeader {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark .alertaHeader {
+  border-color: #2D2D2D;
+}
+
+.alertaEstoqueContainer h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.dark .alertaEstoqueContainer h2 {
+  color: #ffffff;
+}
+
+.alertaEstoqueContainer > p,
+.alertaCard > p {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.dark .alertaEstoqueContainer > p,
+.dark .alertaCard > p {
+  color: var(--gray-400);
+}
+
+/* Badge de contagem */
+.alertaBadge {
+  background: var(--danger);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Mensagem vazia - sucesso */
+.successMessage {
+  text-align: center;
+  padding: 3rem;
+  color: var(--success);
+  background: var(--success-light);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--success);
+}
+
+.dark .successMessage {
+  color: #81C784;
+  background: rgba(46, 125, 50, 0.1);
+  border-color: #2E7D32;
+}
+
+.successMessage p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Tabela de alertas */
+.alertaTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.alertaTable thead tr {
+  background: var(--danger-light);
+}
+
+.dark .alertaTable thead tr {
+  background: rgba(211, 47, 47, 0.15);
+}
+
+.alertaTable th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--danger);
+}
+
+.alertaTable th:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.alertaTable th:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.dark .alertaTable th {
+  color: #EF9A9A;
+}
+
+.alertaTable td {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
+  vertical-align: middle;
+}
+
+.dark .alertaTable td {
+  color: var(--gray-300);
+  border-color: #2D2D2D;
+}
+
+.alertaTable tbody tr {
+  transition: var(--transition);
+}
+
+.alertaTable tbody tr:hover {
+  background: var(--danger-light);
+}
+
+.dark .alertaTable tbody tr:hover {
+  background: rgba(211, 47, 47, 0.1);
+}
+
+.alertaTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Quantidade zerada destacada */
+.alertaTable td:last-child {
+  font-weight: 700;
+  color: var(--danger);
+}
+
+.dark .alertaTable td:last-child {
+  color: #EF9A9A;
+}
+
+/* Status badge na tabela */
+.statusCritico {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.dark .statusCritico {
+  background: rgba(211, 47, 47, 0.2);
+  color: #EF9A9A;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .alertaCard {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .alertaTable {
+    min-width: 400px;
+  }
+
+  .alertaHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,199 @@
+/* Comissão - Design Harmonioso */
+
+.comissaoContainer {
+  padding: 0;
+  transition: var(--transition);
+}
+
+.comissaoContainer.light {
+  color: var(--gray-800);
+}
+
+.comissaoContainer.dark {
+  color: var(--gray-100);
+}
+
+/* Card principal */
+.comissaoCard {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-100);
+}
+
+.dark .comissaoCard {
+  background: var(--bg-dark-secondary);
+  border-color: #2D2D2D;
+  box-shadow: none;
+}
+
+/* Header */
+.comissaoHeader {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.dark .comissaoHeader {
+  border-color: #2D2D2D;
+}
+
+.comissaoContainer h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.dark .comissaoContainer h2 {
+  color: #ffffff;
+}
+
+.comissaoContainer > p,
+.comissaoCard > p {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.dark .comissaoContainer > p,
+.dark .comissaoCard > p {
+  color: var(--gray-400);
+}
+
+/* Mensagem vazia */
+.emptyMessage {
+  text-align: center;
+  padding: 3rem;
+  color: var(--gray-500);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--gray-200);
+}
+
+.dark .emptyMessage {
+  color: var(--gray-400);
+  background: var(--bg-dark-secondary);
+  border-color: #3D3D3D;
+}
+
+/* Tabela de comissões */
+.comissaoTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.comissaoTable thead tr {
+  background: var(--gray-50);
+}
+
+.dark .comissaoTable thead tr {
+  background: var(--bg-dark-tertiary);
+}
+
+.comissaoTable th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-500);
+}
+
+.comissaoTable th:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.comissaoTable th:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.dark .comissaoTable th {
+  color: var(--gray-400);
+}
+
+.comissaoTable td {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
+  vertical-align: middle;
+}
+
+.dark .comissaoTable td {
+  color: var(--gray-300);
+  border-color: #2D2D2D;
+}
+
+.comissaoTable tbody tr {
+  transition: var(--transition);
+}
+
+.comissaoTable tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.dark .comissaoTable tbody tr:hover {
+  background: var(--bg-dark-tertiary);
+}
+
+.comissaoTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Valor da comissão destacado */
+.comissaoTable td:last-child {
+  font-weight: 700;
+  color: var(--success);
+}
+
+.dark .comissaoTable td:last-child {
+  color: #81C784;
+}
+
+/* Total */
+.comissaoTotal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--gray-200);
+}
+
+.dark .comissaoTotal {
+  border-color: #3D3D3D;
+}
+
+.comissaoTotal span {
+  font-size: 1rem;
+  color: var(--gray-600);
+}
+
+.dark .comissaoTotal span {
+  color: var(--gray-400);
+}
+
+.comissaoTotal strong {
+  font-size: 1.5rem;
+  color: var(--success);
+}
+
+.dark .comissaoTotal strong {
+  color: #81C784;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .comissaoCard {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .comissaoTable {
+    min-width: 500px;
+  }
+}

@@ -1,0 +1,56 @@
+/* Main Content Area */
+.mainContent {
+  flex: 1;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--bg-primary);
+  overflow-y: auto;
+  transition: var(--transition);
+}
+
+/* Modo escuro */
+.dark .mainContent {
+  background: var(--bg-dark);
+}
+
+/* Modo claro */
+.light .mainContent {
+  background: var(--bg-primary);
+}
+
+.mainContent .bottom {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  .mainContent {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 918px) {
+  .mainContent .bottom {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainContent {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainContent {
+    padding: 0.75rem;
+  }
+
+  .mainContent .bottom {
+    gap: 1rem;
+  }
+}
